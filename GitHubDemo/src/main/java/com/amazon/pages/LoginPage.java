@@ -40,6 +40,13 @@ public class LoginPage {
 	@FindBy(css="a[data-csa-c-content-id='nav_cs_amazonbasics']")
 	public WebElement AmazonBasicLink;
 	
+	@FindBy(css="a[data-csa-c-content-id='nav_cs_bestsellers']")
+	public WebElement AmazonBestSellerLink;
+	
+	@FindBy(css="a[data-csa-c-content-id='nav_cs_primelink_nonmember']")
+	public WebElement AmazonPrimeLink;
+	
+	
 	
 
 	public LoginPage(WebDriver driver) 
@@ -57,14 +64,6 @@ public class LoginPage {
 			wait.until(ExpectedConditions.visibilityOf(signInButton)).click();    
 	}
 	
-	public void clickonAmaxonHaulLink()
-	{
-		wait.until(ExpectedConditions.visibilityOf(AmazonHaulLink)).click(); 
-	}
 	
-	public void clickonAmaxonBasicLink()
-	{
-		wait.until(ExpectedConditions.visibilityOf(AmazonBasicLink)).click(); 
-	}
 
 }

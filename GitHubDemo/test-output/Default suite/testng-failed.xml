@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Amazon.Test.LandingPageTest">
+      <class name="com.Amazon.Test.LoginPageTest">
         <methods>
-          <include name="initDriver"/>
           <include name="tearDown"/>
+          <include name="initDriver"/>
           <include name="setUp"/>
-          <include name="setUpSuite"/>
-          <include name="loginToApplicationAmazon"/>
+          <include name="clikOnPrimeLink"/>
         </methods>
-      </class> <!-- com.Amazon.Test.LandingPageTest -->
+      </class> <!-- com.Amazon.Test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

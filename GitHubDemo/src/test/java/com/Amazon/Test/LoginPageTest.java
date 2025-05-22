@@ -9,13 +9,16 @@ import com.amazon.pages.LoginPage;
 
 	public class LoginPageTest extends BaseTestAZ {
 
-		LoginPage login;			
+		LoginPage login;	
+		BaseTestAZ baseTest;
+		
 			
 			
 			@BeforeMethod
 		    public void setUp() {
 		       
-				 login = new LoginPage(driver); 
+				baseTest = new BaseTestAZ();
+		        login = new LoginPage(baseTest.driver);  
 		    }
 			
 			/*
@@ -30,17 +33,41 @@ import com.amazon.pages.LoginPage;
 			@Test
 			public void clikOnHaulLink()
 			{
-				login.clickonAmaxonHaulLink();
+				//baseTest=new BaseTestAZ();
+		
+				baseTest.clickonAmaxonLink(login.AmazonHaulLink);
 				Assert.assertTrue(driver.getCurrentUrl().contains("haul/store"), "Amazon Haul page is not displaying");
 				driver.navigate().back();
 				
 			}
 			
+						
 			@Test
 			public void clikOnBasicLink()
 			{
-				login.clickonAmaxonBasicLink();
-				Assert.assertTrue(driver.getCurrentUrl().contains("amazonbasics"), "Amazon Haul page is not displaying");
+				//baseTest=new BaseTestAZ();
+				baseTest.clickonAmaxonLink(login.AmazonBasicLink);
+				Assert.assertTrue(driver.getCurrentUrl().contains("amazonbasics"), "Amazon Basic page is not displaying");
+				driver.navigate().back();
+				
+			}
+			
+			@Test
+			public void clikOnBestSellerLink()
+			{
+				//baseTest=new BaseTestAZ();
+				baseTest.clickonAmaxonLink(login.AmazonBestSellerLink);
+				Assert.assertTrue(driver.getCurrentUrl().contains("bestseller"), "Amazon Best Seller page is not displaying");
+				driver.navigate().back();
+				
+			}
+			
+			@Test
+			public void clikOnPrimeLink()
+			{
+				//baseTest=new BaseTestAZ();
+				baseTest.clickonAmaxonLink(login.AmazonPrimeLink);
+				Assert.assertTrue(driver.getCurrentUrl().contains("primelink"), "Amazon Prime Link  page is not displaying");
 				driver.navigate().back();
 				
 			}

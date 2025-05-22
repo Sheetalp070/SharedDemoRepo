@@ -4,7 +4,7 @@ public class LoginPageTest {
 	
 	public void login()
 	{
-	System.out.println("TestLogin");
+	System.out.println("TestLogin11");
 	}
 
 }

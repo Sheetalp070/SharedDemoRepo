@@ -14,20 +14,21 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -36,5 +37,76 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-safari-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-support-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-support-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-manager-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-os-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-os-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-remote-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-remote-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-safari-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-http-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-http-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-ie-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-ie-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-java-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-java-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-json-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-json-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-manager-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-chromium-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-devtools-v134-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-devtools-v134-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-devtools-v135-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-devtools-v135-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-devtools-v136-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-devtools-v136-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-edge-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-edge-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-firefox-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-firefox-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-logs-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-metrics-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-metrics-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-trace-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-trace-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-api-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-api-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-chrome-driver-4.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-chrome-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/selenium-chromium-driver-4.32.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-extension-autoconfigure-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-extension-autoconfigure-spi-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-logs-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-exporter-logging-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-common-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-common-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-sdk-extension-autoconfigure-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/j2objc-annotations-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/jspecify-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/jspecify-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-api-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-api-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-context-1.49.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-context-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/opentelemetry-exporter-logging-1.49.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/error_prone_annotations-2.38.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/error_prone_annotations-2.38.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/failureaccess-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/failureaccess-1.0.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/guava-33.4.8-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/guava-33.4.8-jre-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/j2objc-annotations-3.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/auto-service-annotations-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/auto-service-annotations-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/byte-buddy-1.17.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/byte-buddy-1.17.5-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/commons-exec-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sheet/Downloads/SeleniumAPIS/commons-exec-1.4.0-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

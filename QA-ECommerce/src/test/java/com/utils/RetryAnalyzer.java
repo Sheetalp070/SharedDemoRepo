@@ -3,14 +3,26 @@ package com.utils;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public abstract class RetryAnalyzer implements IRetryAnalyzer  {
-	
+
+/**
+ * RetryAnalyzer implements TestNG's IRetryAnalyzer to re-run failed test cases.
+ * This is useful for handling flaky tests that fail due to intermittent issues (e.g., UI sync, network delay).
+ */
+public class RetryAnalyzer implements IRetryAnalyzer {
+
+	// Counter to keep track of retry attempts
 	private int retryCount=0;
-	private static final int maxRetry=1;
+	// Maximum number of times to retry a failed test
+	private static final int maxRetryCount=2;
 	
-	public boolean tetry(ITestResult result)
-	{
-		if(retryCount<maxRetry)
+	/**
+     * This method is called by TestNG to determine whether a failed test should be retried.
+     * @param result The result of the test method that just ran.
+     * @return true if TestNG should retry the test, false otherwise.
+     */
+	@Override
+	public boolean retry(ITestResult result) {
+		if (retryCount<maxRetryCount)
 		{
 			retryCount++;
 			return true;
@@ -18,5 +30,6 @@ public abstract class RetryAnalyzer implements IRetryAnalyzer  {
 		}
 		return false;
 	}
-
+	
+	
 }

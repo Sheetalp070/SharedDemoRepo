@@ -2,13 +2,13 @@ package com.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.base.BaseTest;
 import com.page.CartPage;
 import com.page.HomePage;
 import com.page.ProductPage;
 import com.properties.TestDataLoader;
 import com.report.ExtentFactory;
+
 
 /**
  * ProductTest class verifies the complete add-to-cart workflow from searching a

@@ -32,43 +32,45 @@ public class ExtentFactory {
 
 	}
 
-	 // Singleton instance of ExtentFactory
+	// Singleton instance of ExtentFactory
 	private static ExtentFactory instance = new ExtentFactory();
 
 	/**
-     * Returns the singleton instance of ExtentFactory.
-     */
+	 * Returns the singleton instance of ExtentFactory.
+	 */
 	public static ExtentFactory getInstance() {
 		return instance;
 
 	}
 
-	 /**
-     * Sets the ExtentTest object for the current thread.
-     * @param obj the ExtentTest instance to set
-     */
+	/**
+	 * Sets the ExtentTest object for the current thread.
+	 * 
+	 * @param obj the ExtentTest instance to set
+	 */
 	public void setExtent(ExtentTest obj) {
 		extent.set(obj);
 	}
 
 	/**
-     * Returns the ExtentTest object associated with the current thread.
-     */
+	 * Returns the ExtentTest object associated with the current thread.
+	 */
 	public ExtentTest getExtentTest() {
 		return extent.get();
 	}
+
 	/**
-     * Removes the ExtentTest instance from the current thread
-     * to prevent memory leaks.
-     */
+	 * Removes the ExtentTest instance from the current thread to prevent memory
+	 * leaks.
+	 */
 	public void removeExtentTest() {
 		extent.remove();
 	}
 
 	/**
-     * Captures a screenshot of the current browser state and returns it as a Base64 string.
-     * Used for embedding screenshots in ExtentReports.
-     */
+	 * Captures a screenshot of the current browser state and returns it as a Base64
+	 * string. Used for embedding screenshots in ExtentReports.
+	 */
 	public static String captureApplicationScreenshot() {
 		WebDriver driver = DriverFactory.getInstance().getDriver();
 
@@ -88,9 +90,10 @@ public class ExtentFactory {
 	}
 
 	/**
-     * Logs a test step as failed and attaches a screenshot if available.
-     * @param msg the failure message
-     */
+	 * Logs a test step as failed and attaches a screenshot if available.
+	 * 
+	 * @param msg the failure message
+	 */
 	public static void failTest(String msg) {
 		try {
 			ExtentTest test = getInstance().getExtentTest();
@@ -109,11 +112,12 @@ public class ExtentFactory {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
-     * Logs a test step as passed with a green label in the report.
-     * @param msg the pass message
-     */
+	 * Logs a test step as passed with a green label in the report.
+	 * 
+	 * @param msg the pass message
+	 */
 	public static void passTest(String msg) {
 		ExtentTest test = getInstance().getExtentTest();
 		if (test != null) {
@@ -122,57 +126,52 @@ public class ExtentFactory {
 	}
 
 	/**
-     * Logs a successful click action in the test report.
-     * @param btnName the name of the button clicked
-     */
+	 * Logs a successful click action in the test report.
+	 * 
+	 * @param btnName the name of the button clicked
+	 */
 
 	public static void clickPass(String btnName) {
 		getInstance().getExtentTest().pass(btnName + " is clicked ");
 	}
-	
+
 	/**
-     * Logs a failed click action in the test report.
-     * @param btnName the name of the button attempted to be clicked
-     */
+	 * Logs a failed click action in the test report.
+	 * 
+	 * @param btnName the name of the button attempted to be clicked
+	 */
 	public static void clickFail(String btnName) {
 		getInstance().getExtentTest().fail("Error occured while clicking " + btnName);
 	}
 
 	/**
-     * Logs a successful sendKeys (text entry) action in the report.
-     * @param value the value entered
-     * @param elementName the name of the element where text was entered
-     */
+	 * Logs a successful sendKeys (text entry) action in the report.
+	 * 
+	 * @param value       the value entered
+	 * @param elementName the name of the element where text was entered
+	 */
 	public static void sendKeysPass(String value, String elementName) {
 		getInstance().getExtentTest().pass(value + "is entered on " + elementName);
 	}
 
 	/**
-     * Logs a failed sendKeys action in the report.
-     * @param value the value attempted to enter
-     * @param elementName the name of the element
-     */
+	 * Logs a failed sendKeys action in the report.
+	 * 
+	 * @param value       the value attempted to enter
+	 * @param elementName the name of the element
+	 */
 	public static void sendKeysFail(String value, String elementName) {
 		getInstance().getExtentTest().pass("Error occured while " + value + "is entered on " + elementName);
 	}
 
-	// Logs a general test step as passed with a green label in the report
-	/*
-	 * public static void passTest(String msg) {
-	 * 
-	 * getInstance().getExtentTest().log(Status.PASS, MarkupHelper.createLabel(msg,
-	 * ExtentColor.GREEN)); }
-	 * 
-	 * // Logs a test step as failed along with a screenshot (captured as Base64)
-	 * 
-	 * public static void failTest(String msg) { try { String base64Screenshot =
-	 * captureApplicationScreenshot(); ExtentTest test =
-	 * getInstance().getExtentTest();
-	 * 
-	 * if (base64Screenshot != null && !base64Screenshot.isEmpty()) { test.fail(msg,
-	 * MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).
-	 * build()); } else { test.fail(msg + " (screenshot not available)"); } } catch
-	 * (Exception e) { getInstance().getExtentTest().fail(msg +
-	 * " (exception while capturing screenshot)"); e.printStackTrace(); }
-	 */
+	public ExtentTest createTest(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setExtentTest(ExtentTest test) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

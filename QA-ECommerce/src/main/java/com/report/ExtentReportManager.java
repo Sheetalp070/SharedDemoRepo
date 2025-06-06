@@ -5,17 +5,18 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 /**
- * ExtentReportManager is responsible for configuring and setting up the ExtentReports instance.
- * It defines the output path for the HTML report and attaches the SparkReporter.
+ * ExtentReportManager is responsible for configuring and setting up the
+ * ExtentReports instance. It defines the output path for the HTML report and
+ * attaches the SparkReporter.
  */
 public class ExtentReportManager {
 
-	 /**
-     * Sets up and returns a configured ExtentReports object.
-     * This will be used to generate the HTML report of test execution.
-     *
-     * @return ExtentReports instance with Spark reporter attached
-     */
+	/**
+	 * Sets up and returns a configured ExtentReports object. This will be used to
+	 * generate the HTML report of test execution.
+	 *
+	 * @return ExtentReports instance with Spark reporter attached
+	 */
 	public static ExtentReports setUpExtentReport() {
 
 		// Create a SparkReporter which generates an HTML report at the specified path

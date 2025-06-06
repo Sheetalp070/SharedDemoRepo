@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-05T16:01:15 PDT" name="Suite" finished-at="2025-06-05T16:01:21 PDT" duration-ms="5933">
+  <suite started-at="2025-06-05T23:40:19 PDT" name="Suite" finished-at="2025-06-05T23:40:24 PDT" duration-ms="5469">
     <groups>
     </groups>
-    <test started-at="2025-06-05T16:01:15 PDT" name="Test" finished-at="2025-06-05T16:01:21 PDT" duration-ms="5933">
+    <test started-at="2025-06-05T23:40:19 PDT" name="Test" finished-at="2025-06-05T23:40:24 PDT" duration-ms="5469">
       <class name="com.tests.ProductTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.ProductTest@604f2bd2]" started-at="2025-06-05T16:01:10 PDT" name="setUp" finished-at="2025-06-05T16:01:15 PDT" duration-ms="4402" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.ProductTest@604f2bd2]" started-at="2025-06-05T23:40:14 PDT" name="setUp" finished-at="2025-06-05T23:40:19 PDT" duration-ms="4673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAddToCartWorkflow()[pri:0, instance:com.tests.ProductTest@604f2bd2]" started-at="2025-06-05T16:01:15 PDT" name="verifyAddToCartWorkflow" finished-at="2025-06-05T16:01:21 PDT" duration-ms="5531" status="PASS">
+        <test-method signature="verifyAddToCartWorkflow()[pri:0, instance:com.tests.ProductTest@604f2bd2]" started-at="2025-06-05T23:40:19 PDT" name="verifyAddToCartWorkflow" finished-at="2025-06-05T23:40:24 PDT" duration-ms="5074" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToCartWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ProductTest@604f2bd2]" started-at="2025-06-05T16:01:21 PDT" name="tearDown" finished-at="2025-06-05T16:01:21 PDT" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ProductTest@604f2bd2]" started-at="2025-06-05T23:40:25 PDT" name="tearDown" finished-at="2025-06-05T23:40:25 PDT" duration-ms="332" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

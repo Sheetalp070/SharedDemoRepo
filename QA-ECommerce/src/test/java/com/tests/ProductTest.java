@@ -44,7 +44,7 @@ public class ProductTest extends BaseTest {
 		homePage.SearchForItem(searchText);
 		// Select the product from product listing
 		String productName = TestDataLoader.getInstance().getProductName();
-		 ExtentFactory.getInstance().getExtentTest().info("Selecting product: " + productName);
+		ExtentFactory.getInstance().getExtentTest().info("Selecting product: " + productName);
 		
 		 productPage.SelectProduct(productName);
 		// Update the quantity of the selected product in the cart

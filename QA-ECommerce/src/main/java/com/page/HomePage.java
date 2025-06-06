@@ -13,8 +13,8 @@ import com.base.BasePage;
 import com.driver.DriverFactory;
 
 /**
- * HomePage represents the landing page of the e-commerce application.
- * It provides methods to perform product search operations.
+ * HomePage represents the landing page of the e-commerce application. It
+ * provides methods to perform product search operations.
  */
 public class HomePage extends BasePage {
 
@@ -23,11 +23,11 @@ public class HomePage extends BasePage {
 	// Explicit wait with a default timeout of 20 seconds
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-	 // WebElements  for search icon)
+	// WebElements for search icon)
 	@FindBy(css = "svg[data-ng-click='openSearchProducts()']")
 	private WebElement searchIcon;
 
-	 // WebElement for the search text input field)
+	// WebElement for the search text input field)
 	@FindBy(css = "input[id='autoComplete']")
 	private WebElement searchTextArea;
 
@@ -44,18 +44,20 @@ public class HomePage extends BasePage {
 	private WebElement loader;
 
 	/**
-     * Constructor initializes PageFactory elements using the current WebDriver instance.
-     */
+	 * Constructor initializes PageFactory elements using the current WebDriver
+	 * instance.
+	 */
 	public HomePage() {
 		this.driver = driver;
 		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 
 	/**
-     * Searches for a product using the search icon, text input, and view all results.
-     * 
-     * @param productName the name of the product to search for
-     */
+	 * Searches for a product using the search icon, text input, and view all
+	 * results.
+	 * 
+	 * @param productName the name of the product to search for
+	 */
 	public void SearchForItem(String productName) {
 		// Wait for loader to disappear
 		super.waitForLoaderToDisappear(loader); // this should already handle explicit wait
@@ -76,7 +78,5 @@ public class HomePage extends BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(closeBtn));
 		super.click(closeBtn, "Close button");
 	}
-
-	
 
 }

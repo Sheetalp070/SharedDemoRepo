@@ -12,22 +12,22 @@ import com.driver.DriverFactory;
 import com.report.ExtentFactory;
 
 /**
- * ExplicitWaitActions is a utility class that provides reusable methods
- * for applying explicit waits on web elements during test execution.
- * It helps ensure elements are ready before performing actions.
+ * ExplicitWaitActions is a utility class that provides reusable methods for
+ * applying explicit waits on web elements during test execution. It helps
+ * ensure elements are ready before performing actions.
  */
 public class ExplicitWaitActions {
 
 	// Logger instance for logging wait-related events and issues
 	private Logger logger = LogManager.getLogger(ExplicitWaitActions.class);
-	
+
 	/**
-     * Waits for the specified element to be visible on the page.
-     * Logs success or failure messages and captures failure in ExtentReport.
-     *
-     * @param element      the WebElement to wait for
-     * @param elementName  a descriptive name of the element (for logs/reporting)
-     */
+	 * Waits for the specified element to be visible on the page. Logs success or
+	 * failure messages and captures failure in ExtentReport.
+	 *
+	 * @param element     the WebElement to wait for
+	 * @param elementName a descriptive name of the element (for logs/reporting)
+	 */
 	public void waitForElementToBePresent(WebElement element, String elementName) {
 		try {
 
@@ -42,12 +42,12 @@ public class ExplicitWaitActions {
 	}
 
 	/**
-     * Waits for the specified element to become clickable.
-     * Logs success or failure messages and captures failure in ExtentReport.
-     *
-     * @param element      the WebElement to wait for
-     * @param elementName  a descriptive name of the element (for logs/reporting)
-     */
+	 * Waits for the specified element to become clickable. Logs success or failure
+	 * messages and captures failure in ExtentReport.
+	 *
+	 * @param element     the WebElement to wait for
+	 * @param elementName a descriptive name of the element (for logs/reporting)
+	 */
 	public void waitForElementToBeClickable(WebElement element, String elementName) {
 		try {
 

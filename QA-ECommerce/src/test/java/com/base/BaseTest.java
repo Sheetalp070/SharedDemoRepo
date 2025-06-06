@@ -10,17 +10,17 @@ import com.properties.ConfigLoader;
 import com.properties.TestDataLoader;
 
 /**
- * BaseTest is the foundational class for all test classes.
- * It handles WebDriver initialization and teardown, and loads configuration and test data.
- * All test classes should extend this class to inherit common setup/cleanup behavior.
+ * BaseTest is the foundational class for all test classes. It handles WebDriver
+ * initialization and teardown, and loads configuration and test data. All test
+ * classes should extend this class to inherit common setup/cleanup behavior.
  */
 public class BaseTest {
 
 	/**
-     * This method is executed once before all test cases in the test suite.
-     * It initializes the WebDriver, sets the browser, maximizes the window,
-     * and navigates to the application URL.
-     */
+	 * This method is executed once before all test cases in the test suite. It
+	 * initializes the WebDriver, sets the browser, maximizes the window, and
+	 * navigates to the application URL.
+	 */
 	@BeforeSuite
 	public void setUp() {
 
@@ -32,17 +32,22 @@ public class BaseTest {
 		DriverFactory.getInstance().getDriver().manage().window().maximize();
 		// Navigate to the application URL from test data properties
 		DriverFactory.getInstance().getDriver().get(TestDataLoader.getInstance().getAppUrl());
-		
-		String Actual_Title = DriverFactory.getInstance().getDriver().getTitle();
-		// Assert.assertEquals(Actual_Title, "Advantage Shopping", "Actual and expected
-		// titles are matching" );
+		// Define the expected page title (normalize by trimming and removing
+		// non-breaking space)
+		String expectedTitle = "Advantage Shopping".replaceAll("\\u00A0", " ").trim();
+
+		// Capture the actual page title and normalize it the same way
+		String actualTitle = driver.getTitle().replaceAll("\\u00A0", " ").trim();
+
+		// Assert that the actual title matches the expected title
+		Assert.assertEquals(actualTitle, expectedTitle, "Page title  match the expected value.");
 
 	}
-	
+
 	/**
-     * This method is executed once after all test cases in the test suite have run.
-     * It quits the WebDriver instance to release system resources.
-     */
+	 * This method is executed once after all test cases in the test suite have run.
+	 * It quits the WebDriver instance to release system resources.
+	 */
 
 	@AfterSuite
 	public void tearDown() {

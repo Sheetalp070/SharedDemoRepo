@@ -45,9 +45,10 @@ public class ProductPage {
 	 * @param productName the name of the product to be selected
 	 */
 	public void SelectProduct(String productName) {
- 
+
 		// Dynamically fetch all products using CSS selector
-		//List<WebElement> products = driver.findElements(By.cssSelector(".productName.ng-binding"));
+		// List<WebElement> products =
+		// driver.findElements(By.cssSelector(".productName.ng-binding"));
 
 		// Iterate over the product list to find the matching product name
 		for (WebElement product : productList) {
@@ -57,7 +58,7 @@ public class ProductPage {
 				// Wait until the product is clickable, then click it
 				wait.until(ExpectedConditions.elementToBeClickable(product));
 				product.click();
-				
+
 				// Stop the loop once the product is found and clicked
 				break;
 			}

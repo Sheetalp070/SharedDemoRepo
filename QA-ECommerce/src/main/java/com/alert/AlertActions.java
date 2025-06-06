@@ -22,18 +22,17 @@ public class AlertActions {
 	private Logger logger = LogManager.getLogger(AlertActions.class);
 
 	/**
-     * Accepts a JavaScript alert if present.
-     * Waits up to 10 seconds for the alert to appear.
-     * Logs and reports the outcome using Log4j and ExtentReports.
-     */
+	 * Accepts a JavaScript alert if present. Waits up to 10 seconds for the alert
+	 * to appear. Logs and reports the outcome using Log4j and ExtentReports.
+	 */
 	public void acceptAlert() {
 		try {
 			WebDriver driver = DriverFactory.getInstance().getDriver();
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			
+
 			// Wait for the alert to be present
 			wait.until(ExpectedConditions.alertIsPresent()); // Wait for alert
-			
+
 			// Wait for the alert to be present
 			Alert alert = driver.switchTo().alert(); // Switch safely
 
@@ -50,12 +49,12 @@ public class AlertActions {
 	}
 
 	/**
-     * Cancels (dismisses) a JavaScript alert if present.
-     * Logs and reports the action.
-     */
+	 * Cancels  a JavaScript alert if present. Logs and reports the
+	 * action.
+	 */
 	public void cancelAlert() {
 		try {
-			 // Switch to alert and dismiss it
+			// Switch to alert and dismiss it
 			Alert alert = DriverFactory.getInstance().getDriver().switchTo().alert();
 			alert.dismiss();
 			logger.info("Clicked Cancel on alert");

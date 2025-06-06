@@ -1,7 +1,7 @@
 # 🛒 Product Test Automation – Add to Cart Workflow
 
-This project contains a Selenium-based automation test for verifying the **"Add to Cart"** workflow of an e-commerce application using the **Page Object Model (POM)**, **TestNG**, **ExtentReports**, and **Log4j**.
-
+This project contains a Selenium-based automation test for verifying the **"Add to Cart"** workflow of an e-commerce application  using the **Page Object Model (POM)**, **TestNG**, **ExtentReports**, and **Log4j**.
+Url: https://advantageonlineshopping.com/
 ---
 
 ## ✅ Test Case: `verifyAddToCartWorkflow()`
@@ -30,3 +30,12 @@ This project contains a Selenium-based automation test for verifying the **"Add 
 
 ## 📂 Folder Structure
 
+src/
+├── com.base # BaseTest class for browser setup
+├── com.page # Page classes: HomePage, ProductPage, CartPage
+├── com.tests # Test classes: ProductTest
+├── com.properties # Test data and config loaders
+├── com.report # ExtentReport Factory
+resources/
+├── config.properties # Browser and application config
+└── testData.properties# Search keyword, product name, quantity, expected price

@@ -54,7 +54,7 @@ public class ProductTest extends BaseTest {
 		cartPage.updateQuantity(quantity);
 		ExtentFactory.getInstance().getExtentTest().info("Updating quantity to: " + quantity);
 		cartPage.clickCheckOutPopUp();
-		// Verify the total product price in cart matches expected price
+		// Verify the total product price in cart matches expected price1
 		String actualPrice = cartPage.totalProductPrice();
 		String expectedPrice = TestDataLoader.getInstance().getTotalProductPrice();
 		Assert.assertEquals(actualPrice, expectedPrice);

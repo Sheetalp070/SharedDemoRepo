@@ -1,4 +1,4 @@
-package com.Constants;
+package com.constants;
 
 /**
  * Constants class holds all the global static constant values used across the
@@ -25,7 +25,7 @@ public abstract class Constants {
 
 	// Path to production environment test data file (currently same as test file;
 	// can be separated if needed)
-	public static final String PROD_ENV_DATA_FILE = CURRENT_DIR + "/src/test/resources/testData/test_data.properties";
+	public static final String PROD_ENV_DATA_FILE = CURRENT_DIR + "/src/test/resources/testData/prod_data.properties";
 
 	// Explicit wait time (in seconds) for WebDriverWait
 	public static final int EXPLICIT_WAIT_TIME = 20;

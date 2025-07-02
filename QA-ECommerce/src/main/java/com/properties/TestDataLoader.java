@@ -4,7 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
-import com.Constants.Constants;
+
+import com.constants.Constants;
 import com.report.ExtentFactory;
 
 /**

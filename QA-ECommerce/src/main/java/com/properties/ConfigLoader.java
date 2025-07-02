@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.Constants.Constants;
+
+import com.constants.Constants;
 
 /**
  * ConfigLoader is a singleton utility class responsible for loading
@@ -28,9 +29,9 @@ public class ConfigLoader {
 	 */
 	private ConfigLoader()
 
-	{
+	{        //File reader reads the file from a fixed path 
 		try (FileReader reader = new FileReader(Constants.CONFIG_FILE_PATH)) {
-			// Load properties from file into the prop object
+			// Load properties(key-value) from file into the prop object
 			prop.load(reader);
 
 			// Set the execution environment in the Constants class

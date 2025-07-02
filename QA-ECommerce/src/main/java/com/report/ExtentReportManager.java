@@ -1,8 +1,8 @@
 package com.report;
 
-import com.Constants.Constants;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.constants.Constants;
 
 /**
  * ExtentReportManager is responsible for configuring and setting up the
@@ -25,7 +25,7 @@ public class ExtentReportManager {
 		// Create the main ExtentReports instance
 		ExtentReports extent = new ExtentReports();
 
-		// Attach the SparkReporter to the main ExtentReports object
+		// Attach the SparkReporter object to the main ExtentReports object
 		extent.attachReporter(reporter);
 
 		// Return the configured ExtentReports instance

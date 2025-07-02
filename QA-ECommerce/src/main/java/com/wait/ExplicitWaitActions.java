@@ -7,7 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.Constants.Constants;
+
+import com.constants.Constants;
 import com.driver.DriverFactory;
 import com.report.ExtentFactory;
 
@@ -54,11 +55,35 @@ public class ExplicitWaitActions {
 			WebDriverWait wait = new WebDriverWait(DriverFactory.getInstance().getDriver(),
 					Duration.ofSeconds(Constants.EXPLICIT_WAIT_TIME));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
-			logger.info(elementName + "is clickable");
+			logger.info(elementName + " is clickable");
 		} catch (Exception e) {
 			logger.error("Exception occured while waiting for the element to be  clickable" + e.getMessage());
 			ExtentFactory.getInstance().clickFail("Exception occured while waiting for the element to be  clickable");
 		}
 	}
 
+	/**
+	 * Waits for a given WebElement to be clickable within the defined explicit wait
+	 * time. This method uses WebDriverWait and ExpectedConditions to pause the
+	 * execution until the element is ready to receive click actions.
+	 *
+	 * @param element The WebElement to wait for.
+	 */
+	public void waitForElementToBeClickable(WebElement element) {
+		{
+			try {
+				WebDriverWait wait = new WebDriverWait(DriverFactory.getInstance().getDriver(),
+						Duration.ofSeconds(Constants.EXPLICIT_WAIT_TIME));
+				wait.until(ExpectedConditions.elementToBeClickable(element));
+				logger.info(element + " is clickable");
+
+			} catch (Exception e) {
+				logger.error("Exception occured while waiting for the element to be  clickable" + e.getMessage());
+				ExtentFactory.getInstance()
+						.clickFail("Exception occured while waiting for the element to be  clickable");
+			}
+
+		}
+
+	}
 }

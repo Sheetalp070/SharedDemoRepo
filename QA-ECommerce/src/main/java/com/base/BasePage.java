@@ -41,11 +41,25 @@ public class BasePage {
 	 * @param elementName a readable name for reporting purposes
 	 */
 	public void click(WebElement element, String elementName) {
-	explicitWaitActions.waitForElementToBeClickable(element, elementName);
+		explicitWaitActions.waitForElementToBeClickable(element, elementName);
 		element.click();
 		ExtentFactory.getInstance().passTest(elementName + " is clicked");
 	}
-	
+
+	/**
+	 * Waits for a given WebElement to be clickable within the defined explicit wait
+	 * time. This method uses WebDriverWait and ExpectedConditions to pause the
+	 * execution until the element is ready to receive click actions.
+	 *
+	 * @param element The WebElement to wait for.
+	 */
+
+	public void click(WebElement element) {
+		explicitWaitActions.waitForElementToBeClickable(element);
+		element.click();
+		ExtentFactory.getInstance().passTest(element + " is clicked");
+
+	}
 
 	/**
 	 * Sends input to a WebElement after clearing it, and waits for the element to
@@ -59,7 +73,7 @@ public class BasePage {
 		explicitWaitActions.waitForElementToBePresent(element, elementName);
 		element.clear();
 		element.sendKeys(value);
-		ExtentFactory.getInstance().passTest(value + "is entered in " + elementName);
+		ExtentFactory.getInstance().passTest(value + " is entered in " + elementName);
 	}
 
 	/**
@@ -87,7 +101,7 @@ public class BasePage {
 		if (this.isElementSelected(element, elementName)) {
 			this.click(element, elementName);
 		} else {
-			ExtentFactory.getInstance().failTest(elementName + "is already selected");
+			ExtentFactory.getInstance().failTest(elementName + " is already selected");
 		}
 
 	}

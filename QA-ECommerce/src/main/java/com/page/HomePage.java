@@ -51,6 +51,15 @@ public class HomePage extends BasePage {
 		this.driver = driver;
 		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
+	
+	//Other way to define constructor 
+	//Other way
+	public HomePage(WebDriver driver) {
+        super(); // Initializes helper classes from BasePage
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        PageFactory.initElements(driver, this);
+    }
 
 	/**
 	 * Searches for a product using the search icon, text input, and view all
@@ -59,6 +68,8 @@ public class HomePage extends BasePage {
 	 * @param productName the name of the product to search for
 	 */
 	public void SearchForItem(String productName) {
+		
+		
 		// Wait for loader to disappear
 		super.waitForLoaderToDisappear(loader); // this should already handle explicit wait
 
@@ -78,5 +89,19 @@ public class HomePage extends BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(closeBtn));
 		super.click(closeBtn, "Close button");
 	}
+	
+	//other way 
+	/*
+	 * public void searchForItem(String productName) {
+	 * explicitWaitActions.waitForVisibility(searchIcon); click(searchIcon,
+	 * "Search icon");
+	 * 
+	 * sendKeys(searchTextArea, "Search input", productName);
+	 * 
+	 * explicitWaitActions.waitForVisibility(viewAllBtn); click(viewAllBtn,
+	 * "View All button");
+	 * 
+	 * click(closeBtn, "Close button"); }
+	 */
 
 }

@@ -3,7 +3,8 @@ package com.wait;
 import java.time.Duration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.Constants.Constants;
+
+import com.constants.Constants;
 import com.driver.DriverFactory;
 
 /**

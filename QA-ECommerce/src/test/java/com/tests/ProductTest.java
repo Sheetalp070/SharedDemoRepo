@@ -38,26 +38,31 @@ public class ProductTest extends BaseTest {
 		CartPage cartPage = new CartPage();
 		ExtentFactory.getInstance().getExtentTest().info("Page objects initialized");
 		
-		// Search for a product
+		//Step 1. Search for a product
 		String searchText = TestDataLoader.getInstance().getSearchText();
 		ExtentFactory.getInstance().getExtentTest().info("Searching for product: " + searchText);
 		homePage.SearchForItem(searchText);
-		// Select the product from product listing
+		
+		// Step 1.5. Verify product exists across paginated result pages
+	    //productPage.verifyProductInSearchResults(searchText);
+		
+		//Step 2. Select the product from product listing
 		String productName = TestDataLoader.getInstance().getProductName();
 		ExtentFactory.getInstance().getExtentTest().info("Selecting product: " + productName);
 		
 		 productPage.SelectProduct(productName);
-		// Update the quantity of the selected product in the cart
+		//Step 3. Update the quantity of the selected product in the cart
 		// is anything is wrong update the string as int
 		String quantity = TestDataLoader.getInstance().getProductQuantity();
-		// Handle checkout pop-up and go to cart
+		//Step 4. Click checkout pop-up and go to cart
 		cartPage.updateQuantity(quantity);
 		ExtentFactory.getInstance().getExtentTest().info("Updating quantity to: " + quantity);
 		cartPage.clickCheckOutPopUp();
-		// Verify the total product price in cart matches expected price1
+		//Step 5. Verify the total product price in cart matches expected price1
 		String actualPrice = cartPage.totalProductPrice();
 		String expectedPrice = TestDataLoader.getInstance().getTotalProductPrice();
 		Assert.assertEquals(actualPrice, expectedPrice);
+		ExtentFactory.getInstance().getExtentTest().pass("Product price verification passed. Test completed successfully");
 
 	}
 

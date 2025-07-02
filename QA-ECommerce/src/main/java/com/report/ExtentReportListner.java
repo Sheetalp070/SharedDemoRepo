@@ -24,40 +24,46 @@ public class ExtentReportListner implements ITestListener {
 	// ExtentTest represents the current test in the report
 	private ExtentTest extentTest;
 
-	public void onTestStart(ITestResult result) {
-		this.extentTest = extentReports.createTest(result.getName());
-		ExtentFactory.getInstance().setExtent(extentTest);
-		logger.info("Test is added in pool");
-	}
-
 	/**
 	 * Invoked when a test starts. Creates a new ExtentTest instance and associates
 	 * it with the current thread using ExtentFactory.
 	 */
-	public void onTestSuccess(ITestResult result) {
-		ExtentFactory.getInstance().passTest(result.getName());
+	public void onTestStart(ITestResult result) {
+		this.extentTest = extentReports.createTest(result.getName());
+		//Add the extenseTest instance to threadlocal pool
+		ExtentFactory.getInstance().setExtent(extentTest);
+		logger.info("Test is added in pool");
 	}
 
 	/**
 	 * Invoked when a test completes successfully. Logs a PASS status using
 	 * ExtentFactory.
 	 */
+	public void onTestSuccess(ITestResult result) {
+		ExtentFactory.getInstance().passTest(result.getName());
+	}
+
+	/**
+     * Invoked when a test fails.
+     * Logs the exception message and marks the test as failed in the report.
+     */
 	public void onTestFailure(ITestResult result) {
 		ExtentFactory.getInstance().getExtentTest().fail("Exception fail" + result.getThrowable().getMessage());
 	}
 
 	/**
-	 * Invoked when a test fails. Logs the exception message in the ExtentReport.
-	 */
+     * Invoked when a test is skipped.
+     * Logs the test as skipped in ExtentReports.
+     */
 	public void onTestSkipped(ITestResult result) {
 
 		ExtentFactory.getInstance().getExtentTest().log(Status.SKIP, "Test case" + result.getName() + "is skipped");
 	}
 
 	/**
-	 * Invoked once before any test in the suite runs. Initializes the ExtentReports
-	 * object using ExtentReportManager.
-	 */
+     * Invoked before any test methods are run in the suite.
+     * Initializes the ExtentReports object using the report manager.
+     */
 	public void onStart(ITestContext context) {
 
 		this.extentReports = ExtentReportManager.setUpExtentReport();

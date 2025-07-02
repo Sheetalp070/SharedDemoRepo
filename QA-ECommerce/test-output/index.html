@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,  2 skipped,  1 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
@@ -101,11 +101,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
                     <div class="method-list-content skipped suite-Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.tests.ProductTest" class="method navigator-link" hash-for-method="verifyAddToCartWorkflow">verifyAddToCartWorkflow</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.tests.ProductTest" class="method navigator-link" hash-for-method="verifyAddToCartWorkflow">verifyAddToCartWorkflow</a> <!-- method navigator-link -->
@@ -148,30 +143,15 @@
                   <a name="verifyAddToCartWorkflow">
                   </a> <!-- verifyAddToCartWorkflow -->
                   <span class="method-name">verifyAddToCartWorkflow</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getClass()&quot; because &quot;exceptionDriver&quot; is null
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.page.CartPage.updateQuantity(CartPage.java:71)
-	at com.tests.ProductTest.verifyAddToCartWorkflow(ProductTest.java:54)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyAddToCartWorkflow">
-                  </a> <!-- verifyAddToCartWorkflow -->
-                  <span class="method-name">verifyAddToCartWorkflow</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;svg id=&quot;menuSearch&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;24px&quot; height=&quot;24px&quot; viewBox=&quot;0 0 24 24&quot; enable-background=&quot;new 0 0 24 24&quot; xml:space=&quot;preserve&quot; icon-search-svg=&quot;&quot; data-ng-click=&quot;openSearchProducts()&quot;&gt;...&lt;/svg&gt; is not clickable at point (1342, 33). Other element would receive the click: &lt;div class=&quot;loader&quot; style=&quot;display: block; opacity: 1;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=136.0.7103.114)
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#/search/?viewAll=Laptop&quot; translate=&quot;View_All&quot; class=&quot;roboto-medium viewAll ng-scope&quot;&gt;...&lt;/a&gt; is not clickable at point (1300, 94). Other element would receive the click: &lt;div class=&quot;loader&quot; style=&quot;display: block; opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=137.0.7151.104)
 Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [490e972d9396e9b9c273a8c51999f055, clickElement {id=f.397CB458653A6E4BC0DB34C9D6937E96.d.C1A9FBF1669B27FB032EEA4887C38E63.e.33}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\sheet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55707/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (490e972d9396e9b9c273a8c51999f055)] -&gt; css selector: svg[data-ng-click=&apos;openSearchProducts()&apos;]]
-Session ID: 490e972d9396e9b9c273a8c51999f055
+Command: [aafbf9444d4a0388951c0220b8c6cefa, clickElement {id=f.F8D7B637DD4BF7F363973570184008BD.d.C999A6B0AB0D0D688FD86A7BF9BB4DE5.e.39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\sheet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50201}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50201/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (aafbf9444d4a0388951c0220b8c6cefa)] -&gt; css selector: .roboto-medium.viewAll.ng-scope]
+Session ID: aafbf9444d4a0388951c0220b8c6cefa
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -184,7 +164,7 @@ Session ID: 490e972d9396e9b9c273a8c51999f055
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy34.click(Unknown Source)
 	at com.base.BasePage.click(BasePage.java:45)
-	at com.page.HomePage.SearchForItem(HomePage.java:70)
+	at com.page.HomePage.SearchForItem(HomePage.java:86)
 	at com.tests.ProductTest.verifyAddToCartWorkflow(ProductTest.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 30 stack frames
@@ -264,24 +244,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAddToCartWorkflow')
 data.setCell(0, 2, 'com.tests.ProductTest')
-data.setCell(0, 3, 23251);
+data.setCell(0, 3, 4009);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyAddToCartWorkflow')
 data.setCell(1, 2, 'com.tests.ProductTest')
-data.setCell(1, 3, 3073);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyAddToCartWorkflow')
-data.setCell(2, 2, 'com.tests.ProductTest')
-data.setCell(2, 3, 1631);
+data.setCell(1, 3, 3197);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -314,19 +290,15 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">verifyAddToCartWorkflow</span>
-                <span class="method-start">6926 ms</span>
+                <span class="method-start">4817 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAddToCartWorkflow</span>
-                <span class="method-start">8564 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAddToCartWorkflow</span>
-                <span class="method-start">31818 ms</span>
+                <span class="method-start">8029 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">35595 ms</span>
+                <span class="method-start">12710 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
